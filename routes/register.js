@@ -15,7 +15,7 @@ router.post('/', (req, res) => {
 			res.redirect('/register');
 		} else {
 			passport.authenticate('local')(req, res, function () {
-				res.redirect('/home');
+				res.redirect('/main');
 			});
 		}
 	});

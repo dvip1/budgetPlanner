@@ -3,7 +3,32 @@ body {
     height: 100%;
 }
 
+/* Navbar */
+
+#nav {
+    border-radius: 25px;
+    position: fixed;
+    top: 2%;
+    left: 50%;
+    margin: auto;
+    width: 100%;
+    background: linear-gradient(45deg,
+    rgba(231, 229, 226, 0.5),
+    rgba(204, 200, 194, 0.5),
+    rgba(255, 255, 255, 0.5));
+    background-size: 400% 100%;
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+    z-index: 1;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    animation: move-gradient 10s ease-in-out infinite;
+}
+
+
+/* Container of login, register & home page */
 .my-container {
+    animation: move-gradient 5s ease-in-out infinite;
     height: 100vh;
     overflow: auto;
     background-repeat: no-repeat;
@@ -83,10 +108,12 @@ body {
     width: 0;
     height: 0;
 }
+
 .form:hover {
     box-shadow: 10px 5px 5px #FDEBED;
 
 }
-.btn{
+
+.btn {
     border-radius: 20px;
 }

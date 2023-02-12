@@ -1,7 +1,7 @@
 /* Section 1: Importing modules and setting up important constants */
 const express = require('express');
 const app = express();
-const ip="192.168.129.110";
+const ip="192.168.195.103";
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const mongoose = require('mongoose');
