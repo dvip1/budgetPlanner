@@ -1,37 +1,41 @@
 <%- include('partials/header') %>
     <section class="my-container text-center">
-        <div class="form">
-            <main class="form-signin ">
-                <form method="post" action="/register">
-                    <h1 class="h3 mb-3 fw-normal">Register</h1>
-                    <hr>
-                    <div class="form-floating">
-                        <input name="budget" type="number" class="form-control" id="floatingPassword"
-                            placeholder="Monthly Budget" required min="1">
-                        <label for="floatingPassword">Budget</label>
-                    </div>
-                    <div class="form-floating">
-                        <input name="date" type="number" class="form-control" id="floatingPassword" placeholder="Day"
-                            required min="1" max="30">
-                        <label for="floatingPassword">Pay Day</label>
-                        
-                    </div>
-                    <div class="form-floating">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
-                            autocomplete="email" required name="email">
-                        <label for="floatingInput">Email address</label>
-                    </div>
-                    <div class="form-floating">
-                        <input name="password" type="password" class="form-control" id="floatingPassword"
-                            placeholder="Password" required>
-                        <label for="floatingPassword">Password</label>
-                    </div>
+        
+	<!-- Main Content -->
+	<div class="container-fluid">
+		<div class="row main-content bg-success text-center">
+			<div class="col-md-4 text-center company__info">
+				<span class="company__logo"><i class="fa-brands fa-bitcoin  "></i></span></h2></span>
+				<h4 class="company_title">Budget Planner</h4>
+			</div>
+			<div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+				<div class="container-fluid">
+					<div class="row">
+						<h2>Register</h2>
+					</div>
+					<div class="row">
+						<form control="" class="form-group" method="post" action="/register">
+							<div class="row">
+								<input type="email" name="email" id="email" class="form__input" placeholder="Email">
+							</div>
+							<div class="row">
+								<!-- <span class="fa fa-lock"></span> -->
+								<input type="password" name="password" id="password" class="form__input" placeholder="Password">
+							</div>
+			
+							<div class="row submit">
+								<input type="submit" value="Submit" class="btn btn-success">
+							</div>
+						</form>
+					</div>
+					<div class="row">
+						<p>Already have an acoount? <a href="/login">Login Here</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-                    <button class="w-100 btn btn-lg btn-secondary" type="submit">
-                        submit
-                    </button>
-                </form>
-            </main>
-        </div>
+
     </section>
     <%- include('partials/footer') %>

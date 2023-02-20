@@ -1,119 +1,120 @@
 html,
 body {
-    height: 100%;
+   height: 100%;
 }
 
 /* Navbar */
 
 #nav {
-    border-radius: 25px;
-    position: fixed;
-    top: 2%;
-    left: 50%;
-    margin: auto;
-    width: 100%;
-    background: linear-gradient(45deg,
-    rgba(231, 229, 226, 0.5),
-    rgba(204, 200, 194, 0.5),
-    rgba(255, 255, 255, 0.5));
-    background-size: 400% 100%;
-    background-repeat: no-repeat;
-    transform: translateX(-50%);
-    z-index: 1;
-    border: 1px solid rgba(0,0,0,0.1);
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    animation: move-gradient 10s ease-in-out infinite;
+   border-radius: 25px;
+   width: 100%;
+   margin: auto;
+   background: linear-gradient(45deg,
+         rgba(231, 229, 226, 0.5),
+         rgba(204, 200, 194, 0.5),
+         rgba(255, 255, 255, 0.5));
+   background-size: 400% 100%;
+   background-repeat: no-repeat;
+   /* transform: translateX(-50%); */
+   z-index: 1;
+   border: 1px solid rgba(0, 0, 0, 0.1);
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 
 /* Container of login, register & home page */
 .my-container {
-    animation: move-gradient 5s ease-in-out infinite;
-    height: 100vh;
-    overflow: auto;
-    background-repeat: no-repeat;
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: flex;
-    -ms-flex-align: center;
-    -ms-flex-pack: center;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background: linear-gradient(45deg, #757575, #E5E5E5, #D1D1D1, #BDBDBD, #757575);
+   height: 100vh;
+   overflow: auto;
+   background-repeat: no-repeat;
+   display: -ms-flexbox;
+   display: -webkit-box;
+   display: flex;
+   -ms-flex-align: center;
+   -ms-flex-pack: center;
+   -webkit-box-align: center;
+   align-items: center;
+   -webkit-box-pack: center;
+   justify-content: center;
+   padding-top: 40px;
+   padding-bottom: 40px;
+   /* background: linear-gradient(45deg, #757575, #E5E5E5, #D1D1D1, #BDBDBD, #757575); */
+   background: #F5EAEA;
 }
 
-.form-signin {
-    width: 100%;
-    max-width: 330px;
-    padding: 3rem 1rem;
-    margin: 0 auto;
+
+
+.main-content{
+	width: 50%;
+	border-radius: 20px;
+	box-shadow: 0 5px 5px rgba(0,0,0,.4);
+	margin: 5em auto;
+	display: flex;
 }
-
-.form-signin h1 {
-    font-family: sans-serif;
-    font-size: 3rem;
+.company__info{
+	background-color: #008080;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #fff;
 }
-
-.form-signin .checkbox {
-    font-weight: 400;
+.fa-bitcoin{
+	font-size:3em;
 }
-
-.form-signin .form-control {
-    position: relative;
-    box-sizing: border-box;
-    height: auto;
-    padding: 10px;
-    font-size: 16px;
+@media screen and (max-width: 640px) {
+	.main-content{width: 90%;}
+	.company__info{
+		display: none;
+	}
+	.login_form{
+		border-top-left-radius:20px;
+		border-bottom-left-radius:20px;
+	}
 }
-
-.form-signin .form-control:focus {
-    z-index: 2;
+@media screen and (min-width: 642px) and (max-width:800px){
+	.main-content{width: 70%;}
 }
-
-.form-signin input[type="email"] {
-    height: 50px;
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+.row > h2{
+   padding-top:3px;
+	color:#008080;
 }
-
-.form-signin input[type="password"] {
-    height: 50px;
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+.submit{
+   justify-content: center ;
 }
-
-.form {
-    border: 1px rgba(255, 255, 255, 0.4) solid;
-    position: sticky;
-    border-radius: 25px;
-    width: auto;
-    padding: 1rem 2.5rem 2rem;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
-    transition: box-shadow 1.25s ease-in-out;
-
+.login_form{
+	background-color: #fff;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
 }
-
-.form::before {
-    filter: blur(10px);
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
+form{
+	padding: 0 2em;
 }
-
-.form:hover {
-    box-shadow: 10px 5px 5px #FDEBED;
-
+.form__input{
+	width: 100%;
+	border:0px solid transparent;
+	border-radius: 0;
+	border-bottom: 1px solid #aaa;
+	padding: 1em .5em .5em;
+	padding-left: 2em;
+	outline:none;
+	margin:1.5em auto;
+	transition: all .5s ease;
 }
-
+.form__input:focus{
+	border-bottom-color: #008080;
+	box-shadow: 0 0 5px rgba(0,80,80,.4); 
+	border-radius: 4px;
+}
 .btn {
-    border-radius: 20px;
+   border-radius: 20px;
+}
+/***********  Main Page  ************/
+.main-body {
+   padding: 5%;
+   background: linear-gradient(45deg, #757575, #E5E5E5, #D1D1D1, #BDBDBD, #757575);
+   width: 100%;
 }

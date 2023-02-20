@@ -10,6 +10,9 @@ const UserSchema = new mongoose.Schema({
   password: {
     type: String
   },
+  salary:{
+    type: Number
+  }
 });
 UserSchema.plugin(passportLocalMongoose, { usernameField: 'email' });
 const User = new mongoose.model('User', UserSchema);
